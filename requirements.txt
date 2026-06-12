@@ -1,0 +1,7 @@
+streamlit
+pandas
+google-generativeai
+PyPDF2
+reportlab
+chromadb
+sentence-transformers
