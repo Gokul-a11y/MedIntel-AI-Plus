@@ -1,7 +1,8 @@
 streamlit
-pandas
 google-generativeai
-PyPDF2
-reportlab
+pdfplumber
 chromadb
 sentence-transformers
+python-dotenv
+pandas
+reportlab
