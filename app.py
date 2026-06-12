@@ -202,35 +202,31 @@ if st.session_state.analysis_done:
 
     # RAG ASSISTANT
 
-    st.subheader("💬 RAG Medical Assistant")
+   # RAG ASSISTANT
 
-    question = st.text_input(
-        "Ask about your report",
-        key="rag_question"
-    )
+st.markdown("---")
+st.subheader("💬 RAG Medical Assistant")
+
+question = st.text_input(
+    "Ask about your report",
+    key="rag_question"
+)
 
 if st.button("Ask Question"):
 
-    if question.strip():
+    if question and question.strip():
 
         try:
-
             st.session_state.rag_answer = ask_question(
                 st.session_state.report_text,
                 question
             )
 
         except Exception as e:
-
             st.session_state.rag_answer = f"Error: {e}"
 
 if st.session_state.rag_answer:
-
-    st.success(
-        st.session_state.rag_answer
-    )
-
-    st.markdown("---")
+    st.success(st.session_state.rag_answer)
 
     # REPORT COMPARISON
 
